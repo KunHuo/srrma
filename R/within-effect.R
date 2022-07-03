@@ -31,6 +31,10 @@
 #'
 #' # Simple effects
 #' report_within_effect(model, type = "simple")
+#'
+#' # Write to docx.
+#' # results <- report_within_effect(model, type = "all", table.number = 2)
+#' # write_docx(results, path = "Between effect.docx")
 report_within_effect <- function(model,
                                  type = c("all", "main", "simple"),
                                  method = "revpairwise",

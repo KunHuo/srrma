@@ -62,4 +62,7 @@ report_between_effect(model, type = "main")
 # Simple effects
 report_between_effect(model, type = "simple")
 
+# Write to docx.
+# results <- report_between_effect(model, type = "all", table.number = 1)
+# write_docx(results, path = "Between effect.docx")
 }

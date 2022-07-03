@@ -61,4 +61,8 @@ report_within_effect(model, type = "main")
 
 # Simple effects
 report_within_effect(model, type = "simple")
+
+# Write to docx.
+# results <- report_within_effect(model, type = "all", table.number = 2)
+# write_docx(results, path = "Between effect.docx")
 }
