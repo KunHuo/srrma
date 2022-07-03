@@ -15,6 +15,23 @@
 #'
 #' @return a data.frame with class 'rmanova'.
 #' @export
+#'
+#' @examples
+#' model <- repeated_measures_long(data = ldata,
+#'                                 between = treatment,
+#'                                 within = time,
+#'                                 response = score,
+#'                                 subject = subject)
+#'
+#' # Main effects and simple effects
+#' report_between_effect(model, type = "all")
+#'
+#' # Main effects
+#' report_between_effect(model, type = "main")
+#'
+#' # Simple effects
+#' report_between_effect(model, type = "simple")
+#'
 report_between_effect <- function(model,
                                 type = c("all", "main", "simple"),
                                 method = "revpairwise",

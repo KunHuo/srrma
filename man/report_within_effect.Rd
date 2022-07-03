@@ -46,3 +46,19 @@ a data.frame with class 'rmanova'.
 \description{
 Report within-subjects effects
 }
+\examples{
+model <- repeated_measures_long(data = ldata,
+                                between = treatment,
+                                within = time,
+                                response = score,
+                                subject = subject)
+
+# Main effects and simple effects
+report_within_effect(model, type = "all")
+
+# Main effects
+report_within_effect(model, type = "main")
+
+# Simple effects
+report_within_effect(model, type = "simple")
+}

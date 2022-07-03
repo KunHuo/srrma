@@ -15,6 +15,22 @@
 #'
 #' @return a data.frame with class 'rmanova'.
 #' @export
+#'
+#' @examples
+#' model <- repeated_measures_long(data = ldata,
+#'                                 between = treatment,
+#'                                 within = time,
+#'                                 response = score,
+#'                                 subject = subject)
+#'
+#' # Main effects and simple effects
+#' report_within_effect(model, type = "all")
+#'
+#' # Main effects
+#' report_within_effect(model, type = "main")
+#'
+#' # Simple effects
+#' report_within_effect(model, type = "simple")
 report_within_effect <- function(model,
                                  type = c("all", "main", "simple"),
                                  method = "revpairwise",
