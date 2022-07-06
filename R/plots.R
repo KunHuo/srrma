@@ -29,8 +29,8 @@
 #' gg_plot(model, error.type = "none")
 gg_plot <- function(model,
                     error.type = c("se", "ci", "sd", "none"),
-                    method = "revpairwise",
-                    adjust = "bonferroni",
+                    method = c("revpairwise", "pairwise", "dunnett", "trt.vs.ctrl"),
+                    adjust = c("bonferroni", "holm", "hochberg", "hommel", "BH", "BY", "fdr", "none"),
                     ref = 1,
                     signif = TRUE,
                     error.width = 0.1,
@@ -40,6 +40,9 @@ gg_plot <- function(model,
                     family = "serif",
                     legend.position = NULL,
                     ...){
+
+  adjust   <- match.arg(adjust)
+  method   <- match.arg(method)
 
   error.type <- match.arg(error.type)
   between    <- names(attr(model, "between"))

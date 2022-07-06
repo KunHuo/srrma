@@ -3,8 +3,8 @@
 #' @param model a object from [repeated_measures_long] or [repeated_measures_wide].
 #' @param type a character specifying the effect type, 'main' for main effects,
 #' 'simple' for simple effects. 'all' for main and simple effects.
-#' @param method a character value giving the root name of a contrast method, see [contrast] or [contrast-methods].
-#' @param adjust a character, adjust P-values for multiple comparisons, see [contrast] or [p.adjust].
+#' @param method a character value giving the root name of a contrast method.
+#' @param adjust a character, adjust P-values for multiple comparisons, see [p.adjust].
 #' @param ref integer(s) or character(s) specifying which level(s) to use as the
 #' reference. Character values must exactly match elements of levs.
 #' @param se a logical variable specifying whether to shou standard errors or confidence intervals.
@@ -37,8 +37,8 @@
 #' # write_docx(results, path = "Between effect.docx")
 report_between_effect <- function(model,
                                 type = c("all", "main", "simple"),
-                                method = "revpairwise",
-                                adjust = "bonferroni",
+                                method = c("revpairwise", "pairwise", "dunnett", "trt.vs.ctrl"),
+                                adjust = c("bonferroni", "holm", "hochberg", "hommel", "BH", "BY", "fdr", "none"),
                                 ref = 1,
                                 se = TRUE,
                                 language = c("en", "chn"),
@@ -48,6 +48,8 @@ report_between_effect <- function(model,
 
   type     <- match.arg(type)
   language <- match.arg(language)
+  adjust   <- match.arg(adjust)
+  method   <- match.arg(method)
 
   between <- names(attr(model, "between"))
 
@@ -113,6 +115,7 @@ cbind_estimate_contrast_2 <- function(model,
     type = type,
     method = method,
     adjust = adjust,
+    multiple.indicators = TRUE,
     ref = ref,
     se = se,
     digits.effect = digits.effect,
@@ -238,6 +241,7 @@ between_effect_contrast <- function(model,
                                     method = "revpairwise",
                                     adjust = "bonferroni",
                                     ref = 1,
+                                    multiple.indicators = FALSE,
                                     se = TRUE,
                                     digits.effect = 2,
                                     digits.pvalue = 3){
@@ -261,6 +265,7 @@ between_effect_contrast <- function(model,
     contrast_estimate(method = method,
                       adjust = adjust,
                       ref = ref,
+                      multiple.indicators = multiple.indicators,
                       se = se,
                       digits.effect = digits.effect,
                       digits.pvalue = digits.pvalue) %>%

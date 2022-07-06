@@ -7,8 +7,8 @@
 gg_plot(
   model,
   error.type = c("se", "ci", "sd", "none"),
-  method = "revpairwise",
-  adjust = "bonferroni",
+  method = c("revpairwise", "pairwise", "dunnett", "trt.vs.ctrl"),
+  adjust = c("bonferroni", "holm", "hochberg", "hommel", "BH", "BY", "fdr", "none"),
   ref = 1,
   signif = TRUE,
   error.width = 0.1,

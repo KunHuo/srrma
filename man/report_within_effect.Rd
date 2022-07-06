@@ -7,8 +7,8 @@
 report_within_effect(
   model,
   type = c("all", "main", "simple"),
-  method = "revpairwise",
-  adjust = "bonferroni",
+  method = c("revpairwise", "pairwise", "dunnett", "trt.vs.ctrl"),
+  adjust = c("bonferroni", "holm", "hochberg", "hommel", "BH", "BY", "fdr", "none"),
   ref = 1,
   se = TRUE,
   language = c("en", "chn"),
@@ -23,9 +23,9 @@ report_within_effect(
 \item{type}{a character specifying the effect type, 'main' for main effects,
 'simple' for simple effects. 'all' for main and simple effects.}
 
-\item{method}{a character value giving the root name of a contrast method, see \link{contrast} or \link{contrast-methods}.}
+\item{method}{a character value giving the root name of a contrast method.}
 
-\item{adjust}{a character, adjust P-values for multiple comparisons, see \link{contrast} or \link{p.adjust}.}
+\item{adjust}{a character, adjust P-values for multiple comparisons, see \link{p.adjust}.}
 
 \item{ref}{integer(s) or character(s) specifying which level(s) to use as the
 reference. Character values must exactly match elements of levs.}

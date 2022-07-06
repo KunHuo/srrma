@@ -25,6 +25,7 @@ contrast_estimate <- function(ems,
                               method = "revpairwise",
                               adjust = "bonferroni",
                               ref = 1,
+                              multiple.indicators = FALSE,
                               se = TRUE,
                               digits.effect = 2,
                               digits.pvalue = 3){
@@ -45,6 +46,11 @@ contrast_estimate <- function(ems,
                                 format_digits(results$estimate - 1.96 * results$SE, digits.effect),
                                 format_digits(results$estimate + 1.96 * results$SE, digits.effect))
   }
+
+  if(multiple.indicators){
+    results$p.value <- stats::p.adjust(results$p.value, adjust)
+  }
+
   results$star <-  ifelse(results$p.value <= 0.001, "***",
                                    ifelse(results$p.value <= 0.01, "**",
                                           ifelse(results$p.value <= 0.05, "*", "")))
