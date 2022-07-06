@@ -1,7 +1,7 @@
 Package: srrma
 Type: Package
 Title: Statistical Report for Repeated-Measures ANOVA 
-Version: 0.1.0
+Version: 0.1.1
 Author: Rong-rui Huo
 Maintainer: Rong-rui Huo <huorongrui@163.com>
 Description: Statistical Report for Repeated-Measures ANOVA.
@@ -9,6 +9,7 @@ License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)
 Imports: 
     afex,
     dplyr,

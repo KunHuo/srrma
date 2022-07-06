@@ -7,10 +7,10 @@
 \format{
 A data frame with 180 rows and 4 variables:
 \describe{
-  \item{subject}{Subject.}
-  \item{treatment}{Treatment.}
-  \item{time}{Time at baseline, 3 months, and 6 months.}
-  \item{score}{Score.}
+\item{subject}{Subject.}
+\item{treatment}{Treatment.}
+\item{time}{Time at baseline, 3 months, and 6 months.}
+\item{score}{Score.}
 }
 }
 \usage{

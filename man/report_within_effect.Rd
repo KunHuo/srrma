@@ -18,14 +18,14 @@ report_within_effect(
 )
 }
 \arguments{
-\item{model}{a object from [repeated_measures_long] or [repeated_measures_wide].}
+\item{model}{a object from \link{repeated_measures_long} or \link{repeated_measures_wide}.}
 
 \item{type}{a character specifying the effect type, 'main' for main effects,
 'simple' for simple effects. 'all' for main and simple effects.}
 
-\item{method}{a character value giving the root name of a contrast method, see [contrast] or [contrast-methods].}
+\item{method}{a character value giving the root name of a contrast method, see \link{contrast} or \link{contrast-methods}.}
 
-\item{adjust}{a character, adjust P-values for multiple comparisons, see [contrast] or [p.adjust].}
+\item{adjust}{a character, adjust P-values for multiple comparisons, see \link{contrast} or \link{p.adjust}.}
 
 \item{ref}{integer(s) or character(s) specifying which level(s) to use as the
 reference. Character values must exactly match elements of levs.}

@@ -7,11 +7,11 @@
 \format{
 A data frame with 60 rows and 5 variables:
 \describe{
-  \item{subject}{Subject.}
-  \item{treatment}{Treatment.}
-  \item{T0}{Score at baseline.}
-  \item{T3}{Score at 3th months.}
-  \item{T6}{Score at 6th months.}
+\item{subject}{Subject.}
+\item{treatment}{Treatment.}
+\item{T0}{Score at baseline.}
+\item{T3}{Score at 3th months.}
+\item{T6}{Score at 6th months.}
 }
 }
 \usage{
