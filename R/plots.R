@@ -72,7 +72,7 @@ gg_plot <- function(model,
       dplyr::summarise(y.pos = max(.data$upper))
 
     data.signif <-
-      between_effect_contrast(model, type = "simple", method = method, adjust = adjust, ref = ref) %>%
+      between_effect_contrast(model, type = "simple", method = method, adjust = adjust, ref = ref, multiple.indicators = TRUE) %>%
       dplyr::select(within, .data$star) %>%
       dplyr::left_join(y.pos, by = within)
 
