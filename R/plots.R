@@ -2,8 +2,8 @@
 #'
 #' @param model a object from [repeated_measures_long] or [repeated_measures_wide]
 #' @param error.type the type of error bar, one of 'se', 'ci', 'sd', and 'none'.
-#' @param method a character value giving the root name of a contrast method, see [contrast] or [contrast-methods].
-#' @param adjust a character, adjust P-values for multiple comparisons, see [contrast] or [p.adjust].
+#' @param method a character value giving the root name of a contrast method.
+#' @param adjust a character, adjust P-values for multiple comparisons, see [p.adjust].
 #' @param ref integer(s) or character(s) specifying which level(s) to use as the reference. Character values must exactly match elements of levs
 #' @param signif a logical variable indicating whether to show significance codes.
 #' @param error.width width of error bar.

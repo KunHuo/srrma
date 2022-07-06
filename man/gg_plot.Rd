@@ -25,9 +25,9 @@ gg_plot(
 
 \item{error.type}{the type of error bar, one of 'se', 'ci', 'sd', and 'none'.}
 
-\item{method}{a character value giving the root name of a contrast method, see \link{contrast} or \link{contrast-methods}.}
+\item{method}{a character value giving the root name of a contrast method.}
 
-\item{adjust}{a character, adjust P-values for multiple comparisons, see \link{contrast} or \link{p.adjust}.}
+\item{adjust}{a character, adjust P-values for multiple comparisons, see \link{p.adjust}.}
 
 \item{ref}{integer(s) or character(s) specifying which level(s) to use as the reference. Character values must exactly match elements of levs}
 
