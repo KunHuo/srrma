@@ -179,7 +179,3 @@ within_effect_contrast <- function(model,
     simp.effect
   }
 }
-
-
-
-

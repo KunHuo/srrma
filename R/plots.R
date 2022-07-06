@@ -94,7 +94,6 @@ gg_plot <- function(model,
 }
 
 
-
 plotdata <- function(model, error = "se"){
 
   response <- attr(model, "dv")
@@ -129,5 +128,3 @@ plotdata <- function(model, error = "se"){
   }
   dat
 }
-
-
