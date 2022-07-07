@@ -28,4 +28,4 @@ Suggests:
     roxygen2
 Depends: 
     R (>= 2.10)
-URL: 
+URL: https://github.com/kunhuo/srrma
