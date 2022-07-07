@@ -7,7 +7,7 @@
 #'
 #' @return a data.frame.
 #' @export
-mauchly_test <- function(model, digits.pvalue = 3, language = "en", table.number = NULL){
+mauchly_test <- function(model, digits.pvalue = 3, language = c("en", "chn"), table.number = NULL){
   language <- match.arg(language)
 
   res <- summary(model)$sphericity.tests
