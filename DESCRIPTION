@@ -1,7 +1,7 @@
 Package: srrma
 Type: Package
 Title: Statistical Report for Repeated-Measures ANOVA 
-Version: 0.1.1
+Version: 0.1.2
 Author: Rong-rui Huo
 Maintainer: Rong-rui Huo <huorongrui@163.com>
 Description: Statistical Report for Repeated-Measures ANOVA.
