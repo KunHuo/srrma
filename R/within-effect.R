@@ -24,27 +24,27 @@
 #'                                 subject = subject)
 #'
 #' # Main effects and simple effects
-#' report_within_effect(model, type = "all")
+#' within_effect(model, type = "all")
 #'
 #' # Main effects
-#' report_within_effect(model, type = "main")
+#' within_effect(model, type = "main")
 #'
 #' # Simple effects
-#' report_within_effect(model, type = "simple")
+#' within_effect(model, type = "simple")
 #'
 #' # Write to docx.
-#' # results <- report_within_effect(model, type = "all", table.number = 2)
+#' # results <- within_effect(model, type = "all", table.number = 2)
 #' # write_docx(results, path = "Within effect.docx")
-report_within_effect <- function(model,
-                                 type = c("all", "main", "simple"),
-                                 method = c("revpairwise", "pairwise", "dunnett", "trt.vs.ctrl"),
-                                 adjust = c("bonferroni", "holm", "hochberg", "hommel", "BH", "BY", "fdr", "none"),
-                                 ref = 1,
-                                 se = TRUE,
-                                 language = c("en", "chn"),
-                                 digits.effect = 2,
-                                 digits.pvalue = 3,
-                                 table.number = NULL){
+within_effect <- function(model,
+                          type = c("all", "main", "simple"),
+                          method = c("revpairwise", "pairwise", "dunnett", "trt.vs.ctrl"),
+                          adjust = c("bonferroni", "holm", "hochberg", "hommel", "BH", "BY", "fdr", "none"),
+                          ref = 1,
+                          se = TRUE,
+                          language = c("en", "chn"),
+                          digits.effect = 2,
+                          digits.pvalue = 3,
+                          table.number = NULL){
 
   type     <- match.arg(type)
   language <- match.arg(language)

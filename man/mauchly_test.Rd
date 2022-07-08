@@ -4,7 +4,12 @@
 \alias{mauchly_test}
 \title{Mauchly's test of sphericity}
 \usage{
-mauchly_test(model, digits.pvalue = 3, language = "en", table.number = NULL)
+mauchly_test(
+  model,
+  digits.pvalue = 3,
+  language = c("en", "chn"),
+  table.number = NULL
+)
 }
 \arguments{
 \item{model}{a object from \link{repeated_measures_long} or \link{repeated_measures_wide}.}
