@@ -12,18 +12,18 @@
 #' @export
 #'
 #' @examples
-#' repeated_measures_long(data = ldata,
-#'                        between = treatment,
-#'                        within = time,
-#'                        response = score,
-#'                        subject = subject)
+#' rmanova_long(data     = ldata,
+#'              between  = treatment,
+#'              within   = time,
+#'              response = score,
+#'              subject  = subject)
 #'
-#' repeated_measures_long(data = ldata,
-#'                        between = "treatment",
-#'                        within = "time",
-#'                        response = "score",
-#'                        subject = "subject")
-repeated_measures_long <- function(data,
+#' rmanova_long(data     = ldata,
+#'              between  = "treatment",
+#'              within   = "time",
+#'              response = "score",
+#'              subject  = "subject")
+rmanova_long <- function(data,
                           between = NULL,
                           within = NULL,
                           response = NULL,
@@ -61,16 +61,16 @@ repeated_measures_long <- function(data,
 #' @export
 #'
 #' @examples
-#' repeated_measures_wide(data = wdata,
-#'                        subject = subject,
-#'                        between = treatment,
-#'                        responses = T0:T6)
-repeated_measures_wide <- function(data,
-                          between = NULL,
-                          responses = NULL,
-                          covariates = NULL,
-                          subject = NULL,
-                          interaction = TRUE) {
+#' rmanova_wide(data      = wdata,
+#'              subject   = subject,
+#'              between   = treatment,
+#'              responses = T0:T6)
+rmanova_wide <- function(data,
+                         between = NULL,
+                         responses = NULL,
+                         covariates = NULL,
+                         subject = NULL,
+                         interaction = TRUE) {
 
   subject    <- tidyselect::vars_select(names(data), !!dplyr::enquo(subject))
   between    <- tidyselect::vars_select(names(data), !!dplyr::enquo(between))
@@ -89,13 +89,13 @@ repeated_measures_wide <- function(data,
                                names_to = "within",
                                values_to = "response")
 
-  repeated_measures_long(data = ldata,
-                subject = subject,
-                between = between,
-                within = "within",
-                response = "response",
-                covariates = covariates,
-                interaction = interaction )
+  rmanova_long(data = ldata,
+               subject = subject,
+               between = between,
+               within = "within",
+               response = "response",
+               covariates = covariates,
+               interaction = interaction )
 }
 
 

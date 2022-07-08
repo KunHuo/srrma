@@ -12,7 +12,7 @@ mauchly_test(
 )
 }
 \arguments{
-\item{model}{a object from \link{repeated_measures_long} or \link{repeated_measures_wide}.}
+\item{model}{a object from \link{rmanova_long} or \link{rmanova_wide}.}
 
 \item{digits.pvalue}{digits for p value, default 3.}
 

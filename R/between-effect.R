@@ -1,6 +1,6 @@
 #' Between-subjects effects
 #'
-#' @param model a object from [repeated_measures_long] or [repeated_measures_wide].
+#' @param model a object from [rmanova_long] or [rmanova_wide].
 #' @param type a character specifying the effect type, 'main' for main effects,
 #' 'simple' for simple effects. 'all' for main and simple effects.
 #' @param method a character value giving the root name of a contrast method.
@@ -17,11 +17,11 @@
 #' @export
 #'
 #' @examples
-#' model <- repeated_measures_long(data = ldata,
-#'                                 between = treatment,
-#'                                 within = time,
-#'                                 response = score,
-#'                                 subject = subject)
+#' model <- rmanova_long(data     = ldata,
+#'                       between  = treatment,
+#'                       within   = time,
+#'                       response = score,
+#'                       subject  = subject)
 #'
 #' # Main effects and simple effects
 #' between_effect(model, type = "all")

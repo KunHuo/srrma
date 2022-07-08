@@ -18,7 +18,7 @@ between_effect(
 )
 }
 \arguments{
-\item{model}{a object from \link{repeated_measures_long} or \link{repeated_measures_wide}.}
+\item{model}{a object from \link{rmanova_long} or \link{rmanova_wide}.}
 
 \item{type}{a character specifying the effect type, 'main' for main effects,
 'simple' for simple effects. 'all' for main and simple effects.}
@@ -47,11 +47,11 @@ a data.frame with class 'rmanova'.
 Between-subjects effects
 }
 \examples{
-model <- repeated_measures_long(data = ldata,
-                                between = treatment,
-                                within = time,
-                                response = score,
-                                subject = subject)
+model <- rmanova_long(data     = ldata,
+                      between  = treatment,
+                      within   = time,
+                      response = score,
+                      subject  = subject)
 
 # Main effects and simple effects
 between_effect(model, type = "all")

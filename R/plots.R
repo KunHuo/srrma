@@ -1,6 +1,6 @@
 #' Plot for repeated measures ANOVA
 #'
-#' @param model a object from [repeated_measures_long] or [repeated_measures_wide]
+#' @param model a object from [rmanova_long] or [rmanova_wide]
 #' @param error.type the type of error bar, one of 'se', 'ci', 'sd', and 'none'.
 #' @param method a character value giving the root name of a contrast method.
 #' @param adjust a character, adjust P-values for multiple comparisons, see [p.adjust].
@@ -18,11 +18,11 @@
 #' @export
 #'
 #' @examples
-#' model <- repeated_measures_long(data = ldata,
-#'                                 between = treatment,
-#'                                 within = time,
-#'                                 response = score,
-#'                                 subject = subject)
+#' model <- rmanova_long(data     = ldata,
+#'                       between  = treatment,
+#'                       within   = time,
+#'                       response = score,
+#'                       subject  = subject)
 #'
 #' gg_plot(model, error.type = "se")
 #' gg_plot(model, error.type = "ci")

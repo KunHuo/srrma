@@ -1,6 +1,6 @@
 #' Mauchly's test of sphericity
 #'
-#' @param model a object from [repeated_measures_long] or [repeated_measures_wide].
+#' @param model a object from [rmanova_long] or [rmanova_wide].
 #' @param digits.pvalue digits for p value, default 3.
 #' @param language language, 'en' for English, 'chn' for Chinese.
 #' @param table.number table number.

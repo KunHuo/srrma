@@ -21,7 +21,7 @@ gg_plot(
 )
 }
 \arguments{
-\item{model}{a object from \link{repeated_measures_long} or \link{repeated_measures_wide}}
+\item{model}{a object from \link{rmanova_long} or \link{rmanova_wide}}
 
 \item{error.type}{the type of error bar, one of 'se', 'ci', 'sd', and 'none'.}
 
@@ -54,11 +54,11 @@ a object of ggplot2.
 Plot for repeated measures ANOVA
 }
 \examples{
-model <- repeated_measures_long(data = ldata,
-                                between = treatment,
-                                within = time,
-                                response = score,
-                                subject = subject)
+model <- rmanova_long(data     = ldata,
+                      between  = treatment,
+                      within   = time,
+                      response = score,
+                      subject  = subject)
 
 gg_plot(model, error.type = "se")
 gg_plot(model, error.type = "ci")
