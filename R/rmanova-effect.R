@@ -1,5 +1,5 @@
 
-rm_results <- function(model, digits.pvalue = 3){
+rmanova_effect <- function(model, digits.pvalue = 3){
   smod <- summary(model)
 
   univariate.tests <- smod$univariate.tests[-1, 5:6]

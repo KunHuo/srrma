@@ -142,7 +142,9 @@ cbind_estimate_contrast_2 <- function(model,
   res[[1]][res[[1]] == "Main effect"]   <- string_main_effect(language)
   res[[1]][res[[1]] == "Simple effect"] <- string_simple_effect(language)
   names(res)[names(res) == "estimate"]  <- string_difference(language)
-  names(res)[names(res) == "p.value"]   <- string_pvalue(language)
+  names(res)[names(res) == "p.value"]   <- string_pvalue(language, "b")
+
+  res <- add_note(res, string_multiple_comparison(language, adjust, "b"))
 
   res
 }
