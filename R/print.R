@@ -26,3 +26,16 @@ print.rmanova <- function(x, ...){
 
   cat("\n\n")
 }
+
+
+#' Print  object
+#'
+#' @param x a object of 'afex_aov".
+#' @param ... further arguments.
+#'
+#' @keywords internal
+#'
+#' @export
+print.afex_aov <- function(x, ...){
+  print(rmanova_effect(x, ...))
+}
