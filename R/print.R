@@ -30,12 +30,12 @@ print.rmanova <- function(x, ...){
 
 #' Print  object
 #'
-#' @param x a object of 'afex_aov".
+#' @param x a object of 'srrma".
 #' @param ... further arguments.
 #'
 #' @keywords internal
 #'
 #' @export
-print.afex_aov <- function(x, ...){
+print.srrma<- function(x, ...){
   print(rmanova_effect(x, ...))
 }

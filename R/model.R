@@ -43,7 +43,9 @@ rmanova_long <- function(data,
   sep <- ifelse(interaction, "*", "+")
   frm <- sprintf("%s ~ %s %s %s + Error(%s/%s)", response, between, sep, within, subject, within)
   frm <- stats::as.formula(frm)
-  afex::aov_car(formula = frm, data = data)
+  model <- afex::aov_car(formula = frm, data = data)
+  class(model) <- c("srrma", class(model))
+  model
 }
 
 
